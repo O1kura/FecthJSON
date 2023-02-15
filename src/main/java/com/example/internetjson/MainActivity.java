@@ -41,10 +41,10 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
 
     @Override
     public void OnItemClick(int position) {
-        Intent i = new Intent(context,DataAdapter.class);
+        Intent i = new Intent(this,DataAdapter.class);
         PersonInfo personInfo = listOfInfo.get(position);
         i.putExtra("name",personInfo.getName());
-        context.startActivity(i);
+        this.startActivity(i);
     }
 
     class DownloadTask extends AsyncTask<Void, Integer, Boolean> {
